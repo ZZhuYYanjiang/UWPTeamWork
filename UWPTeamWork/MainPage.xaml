@@ -7,7 +7,17 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Orientation="Horizontal">
+            <Button Name="StartButton" FontSize="48" Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Click="StartButton_Click"></Button>
+            <Button Name="CreateButton" FontSize="48" Content="Create" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="20,20,0,0" Click="Create_Click"></Button>
+            <Button Name="ForwardButton" FontSize="48" Content="Forward" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="20,20,0,0" Click="ForwardButton_Click"></Button>
+            <Button Name="BackButton" FontSize="48" Content="Back" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="20,20,0,0" Click="BackButton_Click"></Button>
+            <Button Name="NavigateButton" FontSize="48" Content="Navigate Root Frame" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="20,20,0,0" Click="NavigateButton_Click" ></Button>
 
-    </Grid>
+        </StackPanel>
+        <Frame Name="MyFrame">
+
+        </Frame>
+    </StackPanel>
 </Page>

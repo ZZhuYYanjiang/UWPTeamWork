@@ -25,6 +25,38 @@ namespace UWPTeamWork
         public MainPage()
         {
             this.InitializeComponent();
+            MyFrame.Navigate(typeof(Page1));
+        }
+
+        private void Create_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(Page1));
+        }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(Page1));
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyFrame.CanGoBack)
+            {
+                MyFrame.GoBack();
+            }
+        }
+
+        private void ForwardButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyFrame.CanGoForward)
+            {
+                MyFrame.GoForward();
+            }
+        }
+
+        private void NavigateButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Page2));
         }
     }
 }
