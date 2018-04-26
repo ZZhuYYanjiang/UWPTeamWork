@@ -26,5 +26,12 @@ namespace UWPTeamWork
         {
             this.InitializeComponent();
         }
+
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            //App.SomeImportantValue = ValueTextBox.Text;
+            Frame.Navigate(typeof(Page3), ValueTextBox.Text);
+            // Frame.Navigate(typeof(Page3), "DEVIL");
+        }
     }
 }

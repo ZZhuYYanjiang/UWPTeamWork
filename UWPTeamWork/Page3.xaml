@@ -10,5 +10,6 @@
     <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock FontSize="48" Text="Page 3" />
         <TextBox Name="ValueTextBox" Width="200" />
+        <HyperlinkButton Content="Go to Page 2"  Click="HyperlinkButton_Click" />
     </StackPanel>
 </Page>
