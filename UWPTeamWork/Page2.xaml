@@ -7,9 +7,30 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock FontSize="48" Text="Page 2" />
-        <TextBox Name="ValueTextBox" Width="200" />
-        <HyperlinkButton Content="Go to Page 3"  Click="HyperlinkButton_Click" />
-    </StackPanel>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" FontSize="84" Text="创生" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" FontSize="48" Text="姓名" />
+        <TextBlock Grid.Row="2" FontSize="48" Text="称呼" />
+        <TextBlock Grid.Row="3" FontSize="48" Text="HP" />
+        <TextBlock Grid.Row="4" FontSize="48" Text="ATK" />
+        <TextBlock Grid.Row="5" FontSize="48" Text="DEFENSE" />
+        <TextBox Grid.Row="1"></TextBox>
+        <TextBox Grid.Row="2"></TextBox>
+        <TextBox Grid.Row="3"></TextBox>
+        <TextBox Grid.Row="4"></TextBox>
+        <TextBox Grid.Row="5"></TextBox>
+        <Button Grid.Row="6" FontSize="48" Content="保存" HorizontalAlignment="Right" Margin="0,30,20,10" Click="Button_Click"></Button>
+        <!--<TextBox Name="ValueTextBox" Width="200" />
+        <HyperlinkButton Content="Go to Page 3"  Click="HyperlinkButton_Click" />-->
+    </Grid>
 </Page>

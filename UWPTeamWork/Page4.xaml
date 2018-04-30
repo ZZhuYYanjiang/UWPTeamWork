@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="UWPTeamWork.Page1"
+    x:Class="UWPTeamWork.Page4"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:UWPTeamWork"
@@ -8,8 +8,7 @@
     mc:Ignorable="d">
 
     <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock FontSize="48" Text="Page 1" />
-        <!--<HyperlinkButton Content="Go to Page 2"  Click="HyperlinkButton_Click" />
-        <HyperlinkButton Content="Go to Microsoft.com" NavigateUri="http://www.microsoft.com"  />-->
+        <TextBlock FontSize="84" Text="酒馆" HorizontalAlignment="Center"/>
     </StackPanel>
+  
 </Page>

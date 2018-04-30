@@ -6,18 +6,63 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+            <RelativePanel>
+            <Button Name="Work" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="36" Click="Work_Click" />
+          </RelativePanel>
+            <SplitView Name="MySplitView" 
+                   Grid.Row="1" 
+                   Grid.Column="0"
+                   DisplayMode="CompactOverlay" 
+                   OpenPaneLength="200" 
+                   CompactPaneLength="56" 
+                   HorizontalAlignment="Left">
+                <SplitView.Pane>
+                    <ListBox SelectionMode="Single" 
+                         Name="IconsListBox" 
+                         SelectionChanged="IconsListBox_SelectionChanged">
+                        <ListBoxItem Name="start">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE72D;" />
+                                <TextBlock Text="开始游戏" FontSize="24" Margin="20,0,0,0" />
+                            </StackPanel>
+                        </ListBoxItem>
 
-    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel Orientation="Horizontal">
-            <Button Name="StartButton" FontSize="48" Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Click="StartButton_Click"></Button>
-            <Button Name="CreateButton" FontSize="48" Content="Create" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="20,20,0,0" Click="Create_Click"></Button>
-            <Button Name="ForwardButton" FontSize="48" Content="Forward" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="20,20,0,0" Click="ForwardButton_Click"></Button>
-            <Button Name="BackButton" FontSize="48" Content="Back" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="20,20,0,0" Click="BackButton_Click"></Button>
-            <Button Name="NavigateButton" FontSize="48" Content="Navigate Root Frame" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="20,20,0,0" Click="NavigateButton_Click" ></Button>
+                    <ListBoxItem Name="newperson">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE734;" />
+                            <TextBlock Text="新建角色" FontSize="24" Margin="20,0,0,0" />
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="resss">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE72D;" />
+                            <TextBlock Text="查看人物" FontSize="24" Margin="20,0,0,0" />
+                        </StackPanel>
+                    </ListBoxItem>
 
-        </StackPanel>
-        <Frame Name="MyFrame">
-
+                    <ListBoxItem Name="exitgame">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE734;" />
+                            <TextBlock Text="  退 出" FontSize="24" Margin="20,0,0,0" />
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+                </SplitView.Pane>
+                <!--<SplitView.Content>
+                    <TextBlock Name="ResultTextBlock" />
+                </SplitView.Content>-->
+            </SplitView>
+        <Frame Name="MyFrame"  Grid.Row="1" Grid.Column="1">
+            
         </Frame>
-    </StackPanel>
+    </Grid>
 </Page>

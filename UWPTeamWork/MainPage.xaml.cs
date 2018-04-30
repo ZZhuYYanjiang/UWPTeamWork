@@ -25,38 +25,19 @@ namespace UWPTeamWork
         public MainPage()
         {
             this.InitializeComponent();
-            MyFrame.Navigate(typeof(Page1));
+        }
+      
+        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (start.IsSelected) { MyFrame.Navigate(typeof(Page1)); }
+            else if (newperson.IsSelected) { MyFrame.Navigate(typeof(Page2)); }
+            else if (exitgame.IsSelected) { MyFrame.Navigate(typeof(Page3)); }
+            else if (resss.IsSelected) { MyFrame.Navigate(typeof(Page4)); }
         }
 
-        private void Create_Click(object sender, RoutedEventArgs e)
+        private void Work_Click(object sender, RoutedEventArgs e)
         {
-            MyFrame.Navigate(typeof(Page1));
-        }
-
-        private void StartButton_Click(object sender, RoutedEventArgs e)
-        {
-            MyFrame.Navigate(typeof(Page1));
-        }
-
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (MyFrame.CanGoBack)
-            {
-                MyFrame.GoBack();
-            }
-        }
-
-        private void ForwardButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (MyFrame.CanGoForward)
-            {
-                MyFrame.GoForward();
-            }
-        }
-
-        private void NavigateButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Page2));
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
     }
 }

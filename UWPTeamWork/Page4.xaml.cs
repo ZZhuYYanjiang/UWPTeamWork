@@ -20,16 +20,11 @@ namespace UWPTeamWork
     /// <summary>
     /// 可用于自身或导航至 Frame 内部的空白页。
     /// </summary>
-    public sealed partial class Page2 : Page
+    public sealed partial class Page4 : Page
     {
-        public Page2()
+        public Page4()
         {
             this.InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //数据保存
         }
     }
 }
