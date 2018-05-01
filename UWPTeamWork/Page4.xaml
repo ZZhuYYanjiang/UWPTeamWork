@@ -5,25 +5,27 @@
     xmlns:local="using:UWPTeamWork"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:data="using:xBindDataExample.Model" 
+    xmlns:data="using:UWPTeamWork.Models"
     mc:Ignorable="d">
-    <Page.Resources>
-        <DataTemplate x:Key="BookListDataTemplate" x:DataType="local:Book">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                <Image Name="image" Source="{x:Bind CoverImage}" HorizontalAlignment="Center" Width="150" />
-                <StackPanel Margin="20,20,0,0">
-                    <TextBlock Text="{x:Bind Title}" HorizontalAlignment="Left" FontSize="16" />
-                    <TextBlock Text="{x:Bind Author}" HorizontalAlignment="Left" FontSize="10" />
-                </StackPanel>
-            </StackPanel>
-        </DataTemplate>
-    </Page.Resources>
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,20,20,0">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*" />
             <RowDefinition Height="100" />
         </Grid.RowDefinitions>
+        <GridView ItemsSource="{x:Bind Books}"
+                  IsItemClickEnabled="True"
+                  ItemClick="GridView_ItemClick_1">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="data:Book">
+                    <StackPanel HorizontalAlignment="Center">
+                        <Image Source="{x:Bind CoverImage}" Width="150"></Image>
+                        <TextBlock FontSize="10" Text="{x:Bind Title}" HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock FontSize="10" Text="{x:Bind Author}" HorizontalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
         <TextBlock Grid.Row="0" FontSize="84" Text="酒馆" HorizontalAlignment="Center"/>
         <TextBlock Grid.Row="2" 
                    Name="ResultTextBlock" 
@@ -31,11 +33,5 @@
                    Foreground="Red" 
                    FontWeight="Bold" 
                    Margin="20,20,0,0" />
-        <ListView ItemsSource="{x:Bind Books}" 
-                  ItemClick="ListView_ItemClick" 
-                  IsItemClickEnabled="True" 
-                  ItemTemplate="{StaticResource BookListDataTemplate}">
-        </ListView>
     </Grid>
-  
 </Page>
