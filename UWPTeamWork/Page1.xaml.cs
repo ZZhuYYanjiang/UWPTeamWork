@@ -1,4 +1,5 @@
-﻿using System;
+﻿using rouge;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,8 @@ namespace UWPTeamWork
         public Page1()
         {
             this.InitializeComponent();
+            
+
         }
 
         //private void HyperlinkButton_Click(object sender, RoutedEventArgs e)

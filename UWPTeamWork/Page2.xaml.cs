@@ -1,4 +1,5 @@
-﻿using System;
+﻿using rouge;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -29,7 +30,11 @@ namespace UWPTeamWork
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //数据保存
+            //数据保存          
+            Knight.player.Name = name.Text;
+            Knight.player.Hp = int.Parse(hp.Text);
+            Knight.player.Atk = int.Parse(atk.Text);
+
         }
     }
 }
