@@ -35,40 +35,43 @@ namespace UWPTeamWork
         {
             //数据保存     
             //创建一个XML文档
-            XmlDocument doc = new XmlDocument();
-            doc.Load("Knights.xml");
-            //创建根节点 knights
-            XmlNode knights = doc.SelectSingleNode("/Knights");
-            XmlElement knight = doc.CreateElement(name0.Text);
-            knights.AppendChild(knight);
+            //XmlDocument doc = new XmlDocument();
+            //doc.Load("Knights.xml");
+            ////创建根节点 knights
+            //XmlNode knights = doc.SelectSingleNode("/Knights");
+            //XmlElement knight = doc.CreateElement(name0.Text);
+            //knights.AppendChild(knight);
 
-            //根节点下创建子节点 knightname knighthp...
-            XmlElement knightname1 = doc.CreateElement("Knightname");
-            knightname1.InnerText = name1.Text + name0.Text;
-            knight.AppendChild(knightname1);
+            ////根节点下创建子节点 knightname knighthp...
+            //XmlElement knightname1 = doc.CreateElement("Knightname");
+            //knightname1.InnerText = name1.Text + name0.Text;
+            //knight.AppendChild(knightname1);
 
-            XmlElement knighthp1 = doc.CreateElement("KnightHp");
-            knighthp1.InnerText = hp0.Text;
-            knight.AppendChild(knighthp1);
+            //XmlElement knighthp1 = doc.CreateElement("KnightHp");
+            //knighthp1.InnerText = hp0.Text;
+            //knight.AppendChild(knighthp1);
 
-            XmlElement knightatk1 = doc.CreateElement("KnightAtk");
-            knightatk1.InnerText = atk0.Text;
-            knight.AppendChild(knightatk1);
+            //XmlElement knightatk1 = doc.CreateElement("KnightAtk");
+            //knightatk1.InnerText = atk0.Text;
+            //knight.AppendChild(knightatk1);
 
-            XmlElement knightspeed1 = doc.CreateElement("Knightspeed");
-            knightspeed1.InnerText = speed0.Text;
-            knight.AppendChild(knightspeed1);
-            doc.Save("Knights.xml");
+            //XmlElement knightspeed1 = doc.CreateElement("Knightspeed");
+            //knightspeed1.InnerText = speed0.Text;
+            //knight.AppendChild(knightspeed1);
+            //doc.Save("Knights.xml");
 
-            XmlElement knightskill1 = doc.CreateElement("Knightskill");
-            knightskill1.InnerText = skill0.Text;
-            knight.AppendChild(knightskill1);
+            //XmlElement knightskill1 = doc.CreateElement("Knightskill");
+            //knightskill1.InnerText = skill0.Text;
+            //knight.AppendChild(knightskill1);
             //节点创建完毕
-            doc.Save("Knights.xml");
-            Knight.player.Name = name0.Text;
+            //doc.Save("Knights.xml");
+            BookManager.i += 1;
+            Knight.player.Name = name1.Text + name0.Text;
             Knight.player.Hp = int.Parse(hp0.Text);
             Knight.player.Atk = int.Parse(atk0.Text);
-            defense.Text = Knight.player.Name;
+            Knight.player.Speed = int.Parse(speed0.Text);
+            Knight.player.Skill = int.Parse(skill0.Text);
+            skill0.Text = BookManager.i.ToString();
             //books.Add(new Book { BookId = 1, Title = Knight.player.Name, Author = Knight.player.Hp.ToString(),ATK = Knight.player.Atk.ToString(), CoverImage = "Assets/1.png" });
         }
     }

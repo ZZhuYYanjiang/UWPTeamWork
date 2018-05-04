@@ -44,15 +44,15 @@ namespace UWPTeamWork
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            //创建一个XML文档
-            XmlDocument doc = new XmlDocument();
+            ////创建一个XML文档
+            //XmlDocument doc = new XmlDocument();
 
-            XmlDeclaration dec = doc.CreateXmlDeclaration("1.0", "utf-8", null);//写第一行数据
-            doc.AppendChild(dec);
-            //创建根节点 knights
-            XmlElement knights = doc.CreateElement("Knights");
-            doc.AppendChild(knights);
-            doc.Save("Knights.xml");
+            //XmlDeclaration dec = doc.CreateXmlDeclaration("1.0", "utf-8", null);//写第一行数据
+            //doc.AppendChild(dec);
+            ////创建根节点 knights
+            //XmlElement knights = doc.CreateElement("Knights");
+            //doc.AppendChild(knights);
+            //doc.Save("Knights.xml");
         }
     }
 }
