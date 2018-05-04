@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.IO;
 using rouge;
+using UWPTeamWork;
 namespace test
 {
     class Usingxml
     {
         //初始化
-        private void creatnew()
+        public void creatnew()
         {
 
             //创建一个XML文档
@@ -24,7 +25,7 @@ namespace test
             doc.AppendChild(knights);
             XmlElement knight = doc.CreateElement("Knight");
             knights.AppendChild(knight);
-
+            
             //根节点下创建子节点 knightname knighthp...
             XmlElement knightname1 = doc.CreateElement("Knightname");
             knightname1.InnerText = "Saber";
@@ -66,7 +67,8 @@ namespace test
 
             //创建根节点 knight
             XmlElement knights = dad.DocumentElement;
-            Console.WriteLine("姓名:");
+            //Console.WriteLine("姓名:");
+           
             string Knight = Console.ReadLine();
             XmlElement knight2 = dad.CreateElement(Knight);
             knights.AppendChild(knight2);
@@ -132,6 +134,7 @@ namespace test
             Console.WriteLine("选择一个家伙。");
             string Knight = Console.ReadLine();
             XmlNode docnode = doc.SelectSingleNode("/Knights/" + Knight);
+            XmlNode docc = doc.SelectSingleNode("/Knights");
             XmlNodeList knightself = docnode.ChildNodes;
             knight.Name = knightself[0].InnerText;
             knight.Hp = int.Parse(knightself[1].InnerText);

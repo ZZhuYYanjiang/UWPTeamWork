@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Xml;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -43,6 +44,15 @@ namespace UWPTeamWork
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            //创建一个XML文档
+            XmlDocument doc = new XmlDocument();
+
+            XmlDeclaration dec = doc.CreateXmlDeclaration("1.0", "utf-8", null);//写第一行数据
+            doc.AppendChild(dec);
+            //创建根节点 knights
+            XmlElement knights = doc.CreateElement("Knights");
+            doc.AppendChild(knights);
+            doc.Save("Knights.xml");
         }
     }
 }

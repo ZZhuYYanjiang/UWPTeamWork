@@ -16,6 +16,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" FontSize="84" Text="创生" HorizontalAlignment="Center" />
@@ -24,12 +25,13 @@
         <TextBlock Name="hp" Grid.Row="3" FontSize="48" Text="HP" />
         <TextBlock Name="atk" Grid.Row="4" FontSize="48" Text="ATK" />
         <TextBlock Name="defense" Grid.Row="5" FontSize="48" Text="DEFENSE" />
-        <TextBox Grid.Row="1"></TextBox>
-        <TextBox Grid.Row="2"></TextBox>
-        <TextBox Grid.Row="3"></TextBox>
-        <TextBox Grid.Row="4"></TextBox>
-        <TextBox Grid.Row="5"></TextBox>
-        <Button Grid.Row="6" FontSize="48" Content="保存" HorizontalAlignment="Right" Margin="0,30,20,10" Click="Button_Click"></Button>
+        <TextBox Grid.Row="1" x:Name="name0"></TextBox>
+        <TextBox Grid.Row="2" x:Name="name1"></TextBox>
+        <TextBox Grid.Row="3" x:Name="hp0"></TextBox>
+        <TextBox Grid.Row="4" x:Name="atk0"></TextBox>
+        <TextBox Grid.Row="5" x:Name="speed0"></TextBox>
+        <TextBox Grid.Row="6" x:Name="skill0"></TextBox>
+        <Button Grid.Row="7" FontSize="48" Content="保存" HorizontalAlignment="Right" Margin="0,30,20,10" Click="Button_Click"></Button>
         <!--<TextBox Name="ValueTextBox" Width="200" />
         <HyperlinkButton Content="Go to Page 3"  Click="HyperlinkButton_Click" />-->
     </Grid>
