@@ -124,10 +124,9 @@ namespace rouge
     }
     class Monster
     {
-        public string Name = "萌萌萌萌萌~";
+        public static Monster monster = new Monster();
         public int Hp = 1;
         public int Atk = 1;
-        public int Speed = 1;
         
         public void set()
         {

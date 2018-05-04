@@ -7,9 +7,33 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock FontSize="48" Text="Page 3" />
-        <!--<TextBox Name="ValueTextBox" Width="200" />
-        <HyperlinkButton Content="Go to Page 2"  Click="HyperlinkButton_Click" />-->
-    </StackPanel>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="250"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock FontSize="16" Text="HP:" Grid.Row="0" Grid.Column="1" ></TextBlock>
+        <TextBlock Name="monsterhp" FontSize="16" Text="HP" Grid.Row="0" Grid.Column="2" ></TextBlock>
+        <TextBlock FontSize="16" Text="ATK:" Grid.Column="1" Grid.Row="1"></TextBlock>
+        <TextBlock Name="monsteratk" FontSize="16" Text="ATK" Grid.Column="2" Grid.Row="1"></TextBlock>
+        <TextBlock FontSize="16" Text="Name:" Grid.Row="2" Grid.Column="1"></TextBlock>
+        <TextBlock Name="knightname" FontSize="16" Text="Name" Grid.Row="2" Grid.Column="2"></TextBlock>
+        <TextBlock FontSize="16" Text="HP:" Grid.Column="1" Grid.Row="3"></TextBlock>
+        <TextBlock Name="knighthp" FontSize="16" Text="HP" Grid.Column="2" Grid.Row="3"></TextBlock>
+        <TextBlock FontSize="16" Text="ATK:" Grid.Column="1" Grid.Row="4"></TextBlock>
+        <TextBlock Name="knightatk" FontSize="16" Text="ATK" Grid.Column="2" Grid.Row="4"></TextBlock>
+        <TextBlock Name="zhuangtai" FontSize="16" Text="遭遇" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+        <Button Name="fight" Content="战斗" FontSize="16" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="fight_Click"></Button>
+        <Button Name="goon" Content="前进" FontSize="16" Grid.Column="3" Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="goon_Click"></Button>
+    </Grid>
 </Page>

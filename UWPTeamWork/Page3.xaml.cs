@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using rouge;
 
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
@@ -25,6 +26,35 @@ namespace UWPTeamWork
         public Page3()
         {
             this.InitializeComponent();
+            knightname.Text = Knight.player.Name;
+            knighthp.Text = Knight.player.Hp.ToString();
+            knightatk.Text = Knight.player.Atk.ToString();
+        }
+        
+        private void fight_Click(object sender, RoutedEventArgs e)
+        {
+            while (Knight.player.Hp > 0 && Monster.monster.Hp > 0) ;
+            {
+                Knight.player.Hp -= Monster.monster.Atk;
+                Monster.monster.Hp -= Knight.player.Atk;
+            }
+            if (Knight.player.Hp <= 0) ;
+            {
+                knighthp.Text = Knight.player.Hp.ToString();
+                zhuangtai.Text = "Game Over";
+            }
+            if (Monster.monster.Hp <= 0) ;
+            {
+                knighthp.Text = Knight.player.Hp.ToString();
+                zhuangtai.Text = "Victory!";
+            }
+        }
+
+        private void goon_Click(object sender, RoutedEventArgs e)
+        {
+            Monster.monster.set();
+            monsterhp.Text = Monster.monster.Hp.ToString();
+            monsteratk.Text = Monster.monster.Atk.ToString();
         }
 
         //private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
