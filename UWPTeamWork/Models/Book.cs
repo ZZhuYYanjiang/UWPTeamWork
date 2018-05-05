@@ -23,7 +23,7 @@ namespace UWPTeamWork.Models
         public static List<Book> GetBooks()
         {
             //var books = new List<Book>();
-            books.Add(new Book { BookId = BookManager.i, Title = Knight.player.Name, Author = Knight.player.Hp.ToString(), ATK = Knight.player.Atk.ToString(), CoverImage = "Assets/1.png" });
+            //books.Add(new Book { BookId = BookManager.i, Title = Knight.player.Name, Author = Knight.player.Hp.ToString(), ATK = Knight.player.Atk.ToString(), CoverImage = "Assets/1.png" });
             //books.Add(new Book { BookId = 1, Title = "Vulpate", Author = "Futurum", CoverImage = "Assets/1.png" });
             //books.Add(new Book { BookId = 2, Title = "Mazim", Author = "Sequiter Que", CoverImage = "Assets/2.png" });
             //books.Add(new Book { BookId = 3, Title = "Elit", Author = "Tempor", CoverImage = "Assets/3.png" });

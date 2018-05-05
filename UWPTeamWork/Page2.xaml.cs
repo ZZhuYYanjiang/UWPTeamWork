@@ -68,11 +68,11 @@ namespace UWPTeamWork
             BookManager.i += 1;
             Knight.player.Name = name1.Text + name0.Text;
             Knight.player.Hp = int.Parse(hp0.Text);
+            Knight.player.hp = Knight.player.Hp;
             Knight.player.Atk = int.Parse(atk0.Text);
-            Knight.player.Speed = int.Parse(speed0.Text);
-            Knight.player.Skill = int.Parse(skill0.Text);
-            skill0.Text = BookManager.i.ToString();
-            //books.Add(new Book { BookId = 1, Title = Knight.player.Name, Author = Knight.player.Hp.ToString(),ATK = Knight.player.Atk.ToString(), CoverImage = "Assets/1.png" });
+            Knight.player.atk = Knight.player.Atk;
+            Knight.player.t = 10;
+            BookManager.books.Add(new Book { BookId = BookManager.i, Title = Knight.player.Name, Author = Knight.player.Hp.ToString(), ATK = Knight.player.Atk.ToString(), CoverImage = "Assets/1.png" });
         }
     }
 }

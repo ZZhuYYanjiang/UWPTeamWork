@@ -110,6 +110,9 @@ namespace rouge
     {
         public static Knight player = new Knight();
         public string Name = "NewPlayer";
+        public int t = 10;
+        public int hp = 1;
+        public int atk = 1;
         public int Hp = 1;
         public int Atk = 1;
         public int Speed = 1;
@@ -131,8 +134,8 @@ namespace rouge
         public void set()
         {
             Random random = new Random();
-            this.Hp = random.Next(10,20);
-            this.Atk = random.Next(5,10);
+            this.Hp = random.Next(Knight.player.hp/2,Knight.player.hp);
+            this.Atk = random.Next(Knight.player.atk/2, Knight.player.atk);
 
         }
     }
